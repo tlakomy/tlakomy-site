@@ -1,12 +1,14 @@
 module.exports = {
   pathPrefix: '/', // Prefix for all links. If you deploy your site to example.com/blog your pathPrefix should be "blog"
   siteTitle: "Tomasz's blog", // Navigation and Site Title
-  siteTitleAlt: 'Thoughts and notes by Tomasz Łakomy - Senior Frontend Engineer, egghead.io instructor, tech speaker', // Alternative Site title for SEO
+  siteTitleAlt:
+    'Thoughts and notes by Tomasz Łakomy - Senior Frontend Engineer, egghead.io instructor, tech speaker', // Alternative Site title for SEO
   siteTitleShort: 'Tomasz Blog', // short_name for manifest
   siteUrl: 'https://tlakomy.com', // Domain of your site. No trailing slash!
   siteLanguage: 'en', // Language Tag on <html> element
   siteLogo: 'images/logo.jpg', // Used for SEO and manifest, path to your image you placed in the 'static' folder
-  siteDescription: 'Thoughts and notes by Tomasz Łakomy - Senior Frontend Engineer, egghead.io instructor, tech speaker',
+  siteDescription:
+    'Thoughts and notes by Tomasz Łakomy - Senior Frontend Engineer, egghead.io instructor, tech speaker',
   author: 'Tomasz Łakomy', // Author for schemaORGJSONLD
   organization: 'egghead.io LLC',
 
@@ -17,7 +19,7 @@ module.exports = {
   googleAnalyticsID: '',
 
   // Manifest and Progress color
-  themeColor: '#007acc',
+  themeColor: '#E79228',
   backgroundColor: '#2b2e3c',
 
   // Social component
