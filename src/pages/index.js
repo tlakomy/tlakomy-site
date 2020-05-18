@@ -16,7 +16,7 @@ const Hero = () => {
         color: ${theme.colors.white};
         width: 100%;
         background: ${theme.colors.primary};
-        padding: 20px 0 30px 0;
+        padding: 0;
         display: flex;
       `}
     >
@@ -32,11 +32,19 @@ const Hero = () => {
             position: relative;
             z-index: 5;
             line-height: 1.5;
+            font-size: 1.2rem;
             margin: 0;
-            max-width: ${rhythm(15)};
+            max-width: ${rhythm(30)};
           `}
         >
-          Your blog says the things you want to say.
+          Thoughts and notes from a Senior Frontend Engineer, tech speaker,{' '}
+          <a
+            href="https://egghead.io/instructors/tomasz-lakomy?af=6p5abz"
+            class="css-o7eq5i"
+          >
+            egghead.io
+          </a>{' '}
+          instructor and a ... jQuery evangelist
         </h1>
       </Container>
       <div
