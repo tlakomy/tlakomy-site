@@ -4,7 +4,7 @@ date: 2019-05-13
 title: '7 years as a developer - lessons learned'
 description: "Lessons I've picked up along the way"
 published: true
-banner: 'https://thepracticaldev.s3.amazonaws.com/i/e2wlolwr0rdxb9ygkw5z.png'
+banner: './banner.png'
 ---
 
 _Time flies, doesn't it?_
@@ -15,13 +15,13 @@ My programming journey began in 2012, with my very first C++ internship. Frankly
 
 ## Question: What is the most important language in programming?
 
-It's English.
+It's English 🇬🇧
 
-Or Spanish.
+Or Spanish 🇪🇸
 
-Or Chinese.
+Or Chinese 🇨🇳
 
-Or Polish.
+Or Polish 🇵🇱
 
 Or whatever you use to communicate with other people at work.
 
