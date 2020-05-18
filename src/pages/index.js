@@ -32,13 +32,19 @@ const Hero = () => {
             position: relative;
             z-index: 5;
             line-height: 1.5;
-            font-size: 1.2rem;
+            font-size: 1rem;
             margin: 0;
-            max-width: ${rhythm(30)};
+            max-width: ${rhythm(20)};
           `}
         >
           Thoughts and notes from a Senior Frontend Engineer, tech speaker,{' '}
           <a
+            css={css`
+              color: white;
+              &:hover {
+                color: silver;
+              }
+            `}
             href="https://egghead.io/instructors/tomasz-lakomy?af=6p5abz"
             class="css-o7eq5i"
           >
