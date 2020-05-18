@@ -44,21 +44,13 @@ This is where a well-run business meeting is really helpful. The one after which
 **What is the difference between a business meeting and a gathering?**
 
 - There's an agenda, emailed to everyone days in advance. Preferably with a desired outcome of the meeting.
-
 - It's clear who's running the meeting.
-
 - People are awake, focused. Laptops are closed, phones remain in their pockets.
-
 - It's obvious whether it's a decision meeting or a debate meeting. This is highly important - your team members need to know whether they need to make a decision about the new architecture change at the end of this meeting or they are meant to discuss the idea and come to conclusions later.
-
 - Someone is writing down action points/notes. It would be absolutely fantastic if that person would be informed about that expectation before the meeting starts.
-
 - If there's any audio/video connection involved - the room is prepared well in advance. If you're running the meeting, get to the room 5-10 minutes earlier. Make sure that the TV works, audio is on, microphone is not laying in the corner of the room. Do not make 20 people wait while you're fumbling with an HDMI cable.
-
 - Don't organise meetings that could be an email instead. _Let me repeat that_.
-
 - **Do not organise meetings that could be an email instead**.
-
 - And most importantly, respect others' time. Do not keep 15 minute meeting artificially running for an hour because your pizza arrives at 1pm and you really don't have anything useful to do in between.
 
 ## An unspoken truth
@@ -69,7 +61,9 @@ I feel that a large chunk of why meetings have such a bad rep is because of the 
 
 No matter how hard the organiser is trying to make the meeting productive, if other attendees won't cooperate, it's not going to be a practical use of company's time. And vice-versa, if you want to be an active attendee but no one is running the meeting, your attempts will bounce off the wall. I strongly believe it's better to leave a meeting if you no longer feel relevant instead of staying in the room _just in case_.
 
-Time is the most valuable resource on this planet [citation needed]. You may earn more money in the future (I'm keeping my fingers crossed!), have more resources, team members (who are **not** a resource, do not refer to people as resources, seriously) and anything other you might need - an hour wasted is an hour gone. You will never get to re-experience those 15 minutes of @tlakomy trying to establish a ZOOM connection on a muted TV.
+Time is the most valuable resource on this planet _[citation needed]_. You may earn more money in the future (I'm keeping my fingers crossed!), have more resources, team members (who are **not** a resource, do not refer to people as resources, seriously) and anything other you might need - an hour wasted is an hour gone. 
+
+You will never get to re-experience those 15 minutes of @tlakomy trying to establish a ZOOM connection on a muted TV.
 
 Respect your peers, respect yourself and don't waste their time.
 
