@@ -1,6 +1,6 @@
 ---
 slug: what-does-it-mean-to-be-a-senior-developer
-date: 2019-14-19
+date: 2019-11-14
 title: 'So, what does it mean to be a senior developer?'
 description: 'It has surprisingly little to do with writing more code'
 published: true
