@@ -150,6 +150,4 @@ If your company is okay with sharing stories like that (or maybe they're legally
 
 Don't let others suffer as you did, share best practices and build on each other.
 
-<hr>
-
 PS. Write tests
