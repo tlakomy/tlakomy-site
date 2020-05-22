@@ -43,14 +43,14 @@ const SEO = ({ postData, frontmatter = {}, postImage, isBlogPost }) => (
 
       const socialImage = getShareImage({
         title: title,
-        tagline: 'Tomasz Łakomy (@tlakomy)',
+        tagline: 'by Tomasz Łakomy (@tlakomy)',
         cloudName: 'tlakomy',
         imagePublicID: 'blog-post-card',
         titleFont: 'futura',
         titleExtraConfig: '_line_spacing_-10',
         taglineFont: 'futura',
-        textColor: 'fff',
-        taglineColor: '232129',
+        textColor: '232129',
+        taglineColor: 'ffc',
       })
 
       return (
