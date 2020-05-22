@@ -1,6 +1,7 @@
 import path from 'path'
 import React from 'react'
 import Helmet from 'react-helmet'
+import getShareImage from '@jlengstorf/get-share-image'
 import { StaticQuery, graphql } from 'gatsby'
 import PropTypes from 'prop-types'
 import SchemaOrg from './SchemaOrg'
@@ -15,14 +16,12 @@ const SEO = ({ postData, frontmatter = {}, postImage, isBlogPost }) => (
             title
             description
             canonicalUrl
-            image
             author {
               name
             }
             organization {
               name
               url
-              logo
             }
             social {
               twitter
@@ -43,20 +42,31 @@ const SEO = ({ postData, frontmatter = {}, postImage, isBlogPost }) => (
         : seo.canonicalUrl
       const datePublished = isBlogPost ? postMeta.datePublished : false
 
+      const socialImage = getShareImage({
+        title: title,
+        tagline: '@tlakomy',
+        cloudName: 'tlakomy',
+        imagePublicID: 'blog-post-card',
+        titleFont: 'futura',
+        titleExtraConfig: '_line_spacing_-10',
+        taglineFont: 'futura',
+        textColor: '232129',
+      })
+
       return (
         <React.Fragment>
           <Helmet>
             {/* General tags */}
             <title>{title}</title>
             <meta name="description" content={description} />
-            <meta name="image" content={image} />
+            <meta name="image" content={socialImage} />
 
             {/* OpenGraph tags */}
             <meta property="og:url" content={url} />
             {isBlogPost ? <meta property="og:type" content="article" /> : null}
             <meta property="og:title" content={title} />
             <meta property="og:description" content={description} />
-            <meta property="og:image" content={image} />
+            <meta property="og:image" content={socialImage} />
             <meta property="fb:app_id" content={seo.social.fbAppID} />
 
             {/* Twitter Card tags */}
@@ -64,13 +74,13 @@ const SEO = ({ postData, frontmatter = {}, postImage, isBlogPost }) => (
             <meta name="twitter:creator" content={seo.social.twitter} />
             <meta name="twitter:title" content={title} />
             <meta name="twitter:description" content={description} />
-            <meta name="twitter:image" content={image} />
+            <meta name="twitter:image" content={socialImage} />
           </Helmet>
           <SchemaOrg
             isBlogPost={isBlogPost}
             url={url}
             title={title}
-            image={image}
+            image={socialImage}
             description={description}
             datePublished={datePublished}
             canonicalUrl={seo.canonicalUrl}

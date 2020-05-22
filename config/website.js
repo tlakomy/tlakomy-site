@@ -6,7 +6,7 @@ module.exports = {
   siteTitleShort: 'Tomasz Blog', // short_name for manifest
   siteUrl: 'https://tlakomy.com', // Domain of your site. No trailing slash!
   siteLanguage: 'en', // Language Tag on <html> element
-  siteLogo: 'images/logo.jpg', // Used for SEO and manifest, path to your image you placed in the 'static' folder
+  // siteLogo: 'images/logo.jpg', // Used for SEO and manifest, path to your image you placed in the 'static' folder
   siteDescription:
     'Thoughts and notes by Tomasz Łakomy - Senior Frontend Engineer, egghead.io instructor, tech speaker',
   author: 'Tomasz Łakomy', // Author for schemaORGJSONLD

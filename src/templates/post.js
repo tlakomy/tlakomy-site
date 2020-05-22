@@ -1,6 +1,4 @@
 import React from 'react'
-import { Helmet } from 'react-helmet'
-import getShareImage from '@jlengstorf/get-share-image'
 import { graphql } from 'gatsby'
 import Img from 'gatsby-image'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
@@ -22,23 +20,8 @@ export default function Post({
   const title = mdx.frontmatter.title
   const banner = mdx.frontmatter.banner
 
-  const socialImage = getShareImage({
-    title: title,
-    tagline: '@tlakomy',
-    cloudName: 'tlakomy',
-    imagePublicID: 'blog-post-card',
-    titleFont: 'futura',
-    titleExtraConfig: '_line_spacing_-10',
-    taglineFont: 'futura',
-    textColor: '232129',
-  })
-
   return (
     <Layout site={site} frontmatter={mdx.frontmatter}>
-      <Helmet>
-        <meta property="og:image" content={socialImage} />
-        <meta name="twitter:creator" content="@tlakomy" />
-      </Helmet>
       <SEO frontmatter={mdx.frontmatter} isBlogPost />
       <article
         css={css`
