@@ -36,7 +36,6 @@ const SEO = ({ postData, frontmatter = {}, postImage, isBlogPost }) => (
         frontmatter || postData.childMarkdownRemark.frontmatter || {}
       const title = isBlogPost ? postMeta.title : config.siteTitle
       const description = postMeta.description || seo.description
-      const image = postImage ? `${seo.canonicalUrl}${postImage}` : seo.image
       const url = postMeta.slug
         ? `${seo.canonicalUrl}${path.sep}${postMeta.slug}`
         : seo.canonicalUrl
@@ -44,13 +43,14 @@ const SEO = ({ postData, frontmatter = {}, postImage, isBlogPost }) => (
 
       const socialImage = getShareImage({
         title: title,
-        tagline: '@tlakomy',
+        tagline: 'Tomasz Łakomy (@tlakomy)',
         cloudName: 'tlakomy',
         imagePublicID: 'blog-post-card',
         titleFont: 'futura',
         titleExtraConfig: '_line_spacing_-10',
         taglineFont: 'futura',
-        textColor: '232129',
+        textColor: 'fff',
+        taglineColor: '232129',
       })
 
       return (
