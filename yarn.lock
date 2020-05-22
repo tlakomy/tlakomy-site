@@ -1482,7 +1482,7 @@
 
 "@jlengstorf/get-share-image@^0.7.1":
   version "0.7.1"
-  resolved "https://olx.jfrog.io/olx/api/npm/nc-olxeu-new-jobs-virtual/@jlengstorf/get-share-image/-/get-share-image-0.7.1.tgz#bdef9c633ce6dbf8c300fc82d18befba615a0d5c"
+  resolved "https://registry.yarnpkg.com/@jlengstorf/get-share-image/-/get-share-image-0.7.1.tgz#bdef9c633ce6dbf8c300fc82d18befba615a0d5c"
   integrity sha1-ve+cYzzm2/jDAPyC0YvvumFaDVw=
 
 "@mdx-js/mdx@^1.5.1":
