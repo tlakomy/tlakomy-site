@@ -43,7 +43,7 @@ const SEO = ({ postData, frontmatter = {}, postImage, isBlogPost }) => (
 
       const socialImage = getShareImage({
         title: title,
-        tagline: 'by Tomasz Łakomy (@tlakomy)',
+        tagline: '@tlakomy',
         cloudName: 'tlakomy',
         imagePublicID: 'blog-post-card',
         titleFont: 'futura',
