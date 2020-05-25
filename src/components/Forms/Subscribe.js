@@ -96,7 +96,7 @@ class SignUp extends React.Component {
                 <Form
                   css={css`
                     display: flex;
-                    align-items: flex-end;
+                    align-items: center;
                     button {
                       margin-left: 10px;
                     }

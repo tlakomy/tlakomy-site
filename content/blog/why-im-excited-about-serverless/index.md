@@ -26,7 +26,7 @@ To be honest here for a second - I found the rest of that to be straight up _dau
 
 Writing a node.js script to perform an action? _Sure I can do that!_
 
-Configuring a MySQL DB from scratch, provisioning a server to run it and spending 4 days to be able to save a `todo` in a database? _Please tell me we have an IE8 bug to fix, I don't want ot do that_
+Configuring a MySQL DB from scratch, provisioning a server to run it and spending 4 days to be able to save a `todo` in a database? _Please tell me we have an IE8 bug to fix, I don't want to do that_
 
 After a couple of years I'm fairly confident that given enough time and will power I'm able to figure out quite a lot of stuff on my own but here's the thing:
 
