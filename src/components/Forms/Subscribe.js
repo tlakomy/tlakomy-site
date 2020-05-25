@@ -96,9 +96,10 @@ class SignUp extends React.Component {
                 <Form
                   css={css`
                     display: flex;
-                    align-items: center;
+                    align-items: flex-end;
                     button {
-                      margin-left: 10px;
+                      margin-left: 1rem;
+                      margin-bottom: 0.5rem;
                     }
                     .field-error {
                       display: block;
