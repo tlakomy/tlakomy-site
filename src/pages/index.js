@@ -130,13 +130,13 @@ export const pageQuery = graphql`
       }
     }
     allMdx(
-      limit: 5
+      limit: 10
       sort: { fields: [frontmatter___date], order: DESC }
       filter: { frontmatter: { published: { ne: false } } }
     ) {
       edges {
         node {
-          excerpt(pruneLength: 190)
+          excerpt(pruneLength: 200)
           id
           fields {
             title
