@@ -7,7 +7,7 @@ published: true
 banner: './banner.png'
 ---
 
-## Back to the basics
+# Back to the basics
 
 Basically every non-trivial web app (e.g. Uber for Bunnies) is composed out of three basic components, think of it as a recipe:
 
@@ -18,7 +18,7 @@ Basically every non-trivial web app (e.g. Uber for Bunnies) is composed out of t
 ![A picture of two bunnies](https://dev-to-uploads.s3.amazonaws.com/i/kmrxsx8ejz0ouyneg8ql.jpeg)
 _All of this just to move those two c h u n k s from point A to point B_
 
-## Problems
+# Problems
 
 I've personally been focused strictly on frontend part of this trio for the last couple of years. From vanilla JS, through jQuery, Backbone, Angular, CoffeeScript (_I don't want to talk about it_), React, and React to React.
 
@@ -40,7 +40,7 @@ Building products that allow others to solve problems is my jam.
 
 Setting up entire node.js sever to host a single index.js function that will get called a couple of times per day is not.
 
-## Focusing on what's important
+# Focusing on what's important
 
 The reason why I'm so excited about serverless from a frontend engineer perspective is that it allows me to delegate away my problems.
 
@@ -70,7 +70,7 @@ This slide from AWS Re:Invent 2017 is a glimpse in the future we're already seei
 
 You know, I'm just really happy to have more tools in my toolkit that I get to play with and use to build better features, products and solving problems faster (and cheaper!)
 
-## I'm hyped, where do I start?
+# I'm hyped, where do I start?
 
 Excellent question!
 

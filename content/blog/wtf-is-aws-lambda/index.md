@@ -1,7 +1,7 @@
 ---
 slug: wtf-is-aws-lambda
 date: 2020-01-19
-title: 'WTF is AWS Lambda?'
+title: 'AWS Made Simple: WTF is AWS Lambda?'
 description: 'Sooo... what is the deal with this whole serverless thing?'
 published: true
 banner: './banner.png'

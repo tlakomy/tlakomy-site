@@ -1,7 +1,7 @@
 ---
 slug: what-is-aws-cdk
 date: 2020-05-25
-title: "WTF is AWS CDK (Cloud Development Kit) and why it's awesome 🤩"
+title: "AWS Made Simple: WTF is AWS CDK (Cloud Development Kit) and why it's awesome 🤩"
 description: 'description: Unlock a superpower - use a single language for frontend, backend *and* cloud infrastructure'
 published: true
 banner: './banner.png'

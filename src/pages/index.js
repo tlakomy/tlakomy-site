@@ -50,7 +50,7 @@ const Hero = () => {
           >
             egghead.io
           </a>{' '}
-          instructor and a ... jQuery evangelist
+          instructor and lifelong learner
         </h1>
       </Container>
       <div
