@@ -1,7 +1,7 @@
 ---
 slug: add-api-gateway-to-lambda
 date: 2020-05-27
-title: 'AWS Made Simple: Triggering Lambda function via API Gateway'
+title: 'AWS Made Simple: Trigger a lambda function via API Gateway'
 description: 'Get started building your very first serverless function'
 published: true
 banner: './banner.png'
