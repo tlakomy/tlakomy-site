@@ -1,15 +1,11 @@
 ---
 slug: create-an-aws-lambda-function-from-scratch
 date: 2020-01-20
-title: 'Create an AWS Lambda function from scratch'
+title: 'AWS Made Simple: Create an AWS Lambda function from scratch'
 description: 'Get started building your very first serverless function'
 published: true
 banner: './banner.png'
 ---
-
-## Before we start
-
-If you don't feel like reading and prefer to watch a bunch of quick (less than 3 minutes) videos - this blog series is based on a 💰free 💰[egghead.io](https://egghead.io/s/km6vr) video collection I've published recently, check it out here: [Learn AWS Lambda from scratch](https://egghead.io/lessons/aws-wtf-is-aws-lambda?pl=learn-aws-lambda-from-scratch-d29d?af=6p5abz).
 
 ## How do I create an AWS Lambda function?
 
@@ -28,9 +24,9 @@ Once you're in, navigate to **Lambda** (you'll find it under **Compute** section
 
 There are three options available here:
 
-- **Author from scratch** - you'll start with a simple "Hello World" example and you'll be able to implement your function on your own
-- **Use a blueprint** - allows you to build a lambda function using a "blueprint". A blueprint in this context means a piece of code and configuration for common use cases, for instance logging updates made to a DynamoDB table or triggering a function when something is uploaded to S3
-- **Browse serverless app respository** - allows you to deploy entire sample applications from the AWS Serverless Application Repository. The packages can be either provided by AWS or by the community
+-   **Author from scratch** - you'll start with a simple "Hello World" example and you'll be able to implement your function on your own
+-   **Use a blueprint** - allows you to build a lambda function using a "blueprint". A blueprint in this context means a piece of code and configuration for common use cases, for instance logging updates made to a DynamoDB table or triggering a function when something is uploaded to S3
+-   **Browse serverless app respository** - allows you to deploy entire sample applications from the AWS Serverless Application Repository. The packages can be either provided by AWS or by the community
 
 The last two options are definitely worth checking if you have a feeling that the problem you're trying to solve has already been solved by someone else, no need to re:Invent (get it?) the wheel. Not to mention you can learn quite a lot by checking them out.
 
@@ -71,10 +67,10 @@ Each function can have multiple triggers and destinations.
 
 As discussed in my [previous post](https://dev.to/tlakomy/wtf-is-aws-lambda-47ba), your functions can be triggered by various sources, including:
 
-- _AWS Gateway_ can trigger your lambda function by an HTTP request (useful when you want to create an API)
-- _AWS IoT_ - you can literally have a "push to prod" button on your desk
-- _AWS S3_ - a lambda function can be triggered by uploading a file to an S3 bucket
-- _AWS DynamoDB_ - you can trigger a lambda function by for instance adding an item to your DynamoDB table
+-   _AWS Gateway_ can trigger your lambda function by an HTTP request (useful when you want to create an API)
+-   _AWS IoT_ - you can literally have a "push to prod" button on your desk
+-   _AWS S3_ - a lambda function can be triggered by uploading a file to an S3 bucket
+-   _AWS DynamoDB_ - you can trigger a lambda function by for instance adding an item to your DynamoDB table
 
 When it comes to destinations - your function invocation records can be sent to multiple places: an SQS queue, a SNS topic or an event bus. Useful when you'd like to keep a track of your lambda function failures (or receive an email every single time someone calls your function, terrible idea btw)
 
@@ -113,4 +109,6 @@ Okay, now that we're ready - let's click on **Test** again and see the result:
 
 We can see the result we've specified earlier, as well as logs detailing the function duration, memory size, max memory used and billed (ka-ching!) duration. Note that you won't get charged for the first million invocations of your lambda function in a month.
 
-That's it! In the next post we'll tackle adding an API Gateway trigger to a AWS Lambda function to create a REST API
+## Óne more thing!
+
+If you don't feel like reading and prefer to watch a bunch of quick (less than 3 minutes) videos - this blog series is based on a 💰free 💰[egghead.io](https://egghead.io/s/km6vr) video collection I've published recently, check it out here: [Learn AWS Lambda from scratch](https://egghead.io/lessons/aws-wtf-is-aws-lambda?pl=learn-aws-lambda-from-scratch-d29d?af=6p5abz).
