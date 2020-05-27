@@ -9,7 +9,7 @@ banner: './banner.png'
 
 Once we create an AWS Lambda function we _probably_ want to be able to call it (otherwise, why bother creating a function at all?).
 
-As we established in the previous posts, an AWS Lambda function can be triggered by various events - including an HTTP request, which [_citation needed_] is probably the most common use case.
+As we established in the [previous](https://tlakomy.com/create-an-aws-lambda-function-from-scratch) [posts](https://tlakomy.com/wtf-is-aws-lambda/), an AWS Lambda function can be triggered by various events - including an HTTP request, which [_citation needed_] is probably the most common use case.
 
 With AWS Lambda you can create a serverless REST API in no time!
 
