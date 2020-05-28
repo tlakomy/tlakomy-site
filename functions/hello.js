@@ -1,8 +1,6 @@
-exports.handler = async function(event, context, callback) {
-    console.log({ event, context, callback });
-
+exports.handler = async function(event, context) {
     return {
         statusCode: 200,
-        body: 'hello world!',
+        body: 'Witaj świecie!', // Our function is Polished 🇵🇱
     };
 };
