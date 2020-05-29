@@ -19,7 +19,7 @@ AWS Lambda, S3 buckets, DynamoDB tables, API Gateways - we can define all those 
 
 You don't have to use TypeScript though! AWS CDK supports TypeScript, JavaScript, Python, C# and Java.
 
-## How does it work?
+# How does it work?
 
 Cloud Development Kit is built on top of CloudFormation which is an AWS service that allows you to describe a stack in AWS using a static file (either YAML or JSON).
 
@@ -27,7 +27,7 @@ In essence - it's going to convert our code written in TypeScript, to JavaScript
 
 Sounds complicated, right? Luckily CDK abstracts **a lot** of things away from us, so we get to focus on solving our problems instead of writing YAML by hand.
 
-## How do I install AWS CDK on my machine?
+# How do I install AWS CDK on my machine?
 
 1. [Create an AWS account](https://portal.aws.amazon.com/gp/aws/developer/registration/index.html?refid=em_127222) (if you don't have one already).
 1. Install **AWS CLI (Command Line Interface)**. Consider using [AWS CLI version 2](https://docs.aws.amazon.com/cli/latest/userguide/install-cliv2.html) which is available for Linux, MacOS and Windows
@@ -36,7 +36,7 @@ Sounds complicated, right? Luckily CDK abstracts **a lot** of things away from u
 1. Install **AWS CDK (Cloud Development Kit)** by running `npm install -g aws-cdk`
 1. Verify that AWS CDK has been successfully installed by running `cdk --version` in your terminal. You should see something similar to `1.42.0 (build e251651)`.
 
-## How does it compare against AWS SAM, Serverless Framework and CloudFormation?
+# How does it compare against AWS SAM, Serverless Framework and CloudFormation?
 
 Great question!
 
@@ -44,7 +44,9 @@ This is honestly a material for an entire blogpost which I'll link here later.
 
 For now let's just say that CloudFormation, AWS SAM, Serverless Framework and CDK are solving a similar problem (defining and deploying your app architecture in the cloud). CDK is different than rest of them because it uses a general purpose programming language to define infrastructure, whereas CF, SAM and Serverless Framework use YAML/JSON.
 
-## What's inside of a CDK stack?
+(BTW: if you'd like to learn more about AWS SAM, check out [Learn AWS Serverless Application Model (AWS SAM) from scratch](https://egghead.io/playlists/learn-aws-serverless-application-model-aws-sam-framework-from-scratch-baf9?af=6p5abz))
+
+# What's inside of a CDK stack?
 
 In order to create a a sample stack, run:
 
@@ -133,7 +135,7 @@ Every construct takes 3 arguments:
 Excellent question!
 
 I'm launching an AWS CDK course on [egghead.io](https://egghead.io/s/km6vr) **soon** so make sure to get a subscription!
-It's the best piece of content I've ever created and I'm incredibly proud of it.
+It's the best piece of content I've ever created and I'm incredibly proud of it 🌟
 
 By the way - if you'd like to learn some AWS **for free** from yours truly, check out those free video collections on [egghead.io](https://egghead.io/s/km6vr):
 
