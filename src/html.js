@@ -12,10 +12,7 @@ export default class HTML extends React.Component {
             name="viewport"
             content="width=device-width, initial-scale=1, shrink-to-fit=no"
           />
-          <meta
-            name="monetization"
-            content="$coil.xrptipbot.com/fImX5JdWSMW4JwgF-LyGsw"
-          />
+          <meta name="monetization" content="$ilp.uphold.com/NBQEYEy4h3kA">
           {this.props.headComponents}
         </head>
         <body {...this.props.bodyAttributes}>
