@@ -11,9 +11,9 @@ banner: './banner.png'
 
 Basically every non-trivial web app (e.g. Uber for Bunnies) is composed out of three basic components, think of it as a recipe:
 
-- **Visuals (frontend)** - a layer that users interact with, so your good ol' trio of HTML/CSS/JavaScript (with a dash of jQuery plugins, tracking scripts and whatnot. Sometimes even with some animations sprinkled here and there)
-- **Logic (backend)** - the _brainz_ of your app. This is where the vast majority of logic lives and here be dragons (and databases). Before the node.js days working with backend was more or less a completely separate skillset than writing frontend code (e.g. PHP backend and jQuery-driven frontend)
-- **Where-it-all-lives (infrastructure)** - the website you're seeing right now is hosted _somewhere_. Code and logic doesn't exist in a vacuum - something **has** to run it. Therefore to handle production-grade load of your Uber for Bunnies website you need a server (or servers) (or an old PC in the corner of your room running your entire site, I don't judge).
+-   **Visuals (frontend)** - a layer that users interact with, so your good ol' trio of HTML/CSS/JavaScript (with a dash of jQuery plugins, tracking scripts and whatnot. Sometimes even with some animations sprinkled here and there)
+-   **Logic (backend)** - the _brainz_ of your app. This is where the vast majority of logic lives and here be dragons (and databases). Before the node.js days working with backend was more or less a completely separate skillset than writing frontend code (e.g. PHP backend and jQuery-driven frontend)
+-   **Where-it-all-lives (infrastructure)** - the website you're seeing right now is hosted _somewhere_. Code and logic doesn't exist in a vacuum - something **has** to run it. Therefore to handle production-grade load of your Uber for Bunnies website you need a server (or servers) (or an old PC in the corner of your room running your entire site, I don't judge).
 
 ![A picture of two bunnies](https://dev-to-uploads.s3.amazonaws.com/i/kmrxsx8ejz0ouyneg8ql.jpeg)
 _All of this just to move those two c h u n k s from point A to point B_
@@ -76,12 +76,12 @@ Excellent question!
 
 If you'd like to learn some AWS **for free** from yours truly, check out those free video collections on [egghead.io](https://egghead.io/s/km6vr):
 
-- [Learn AWS Lambda from scratch](https://egghead.io/playlists/learn-aws-lambda-from-scratch-d29d?af=6p5abz)
-- [Learn AWS Serverless Application Model (AWS SAM) from scratch](https://egghead.io/playlists/learn-aws-serverless-application-model-aws-sam-framework-from-scratch-baf9?af=6p5abz)
+-   [Learn AWS Lambda from scratch](https://egghead.io/playlists/learn-aws-lambda-from-scratch-d29d?af=6p5abz)
+-   [Learn AWS Serverless Application Model (AWS SAM) from scratch](https://egghead.io/playlists/learn-aws-serverless-application-model-aws-sam-framework-from-scratch-baf9?af=6p5abz)
 
 ![AWS Cloud Development Kit egghead.io course logo](https://dev-to-uploads.s3.amazonaws.com/i/9p45p74bklgke0gsjjrl.png)
 
-I'm also launching an AWS Cloud Development Kit [egghead.io](https://egghead.io/s/km6vr) soon and to sum up why you shoul...might be hyped to take it:
+I've also launched an AWS Cloud Development Kit course on [egghead.io](https://egghead.io/s/km6vr) - make sure to check out [Build an App with the AWS Cloud Development Kit](https://egghead.io/courses/build-an-app-with-the-aws-cloud-development-kit?af=6p5abz)!
 
 **AWS Cloud Development Kit** allows you to build the **_entire_** stack (frontend, serverless backend, AWS infrastructure) using a **single** programming language - TypeScript!
 

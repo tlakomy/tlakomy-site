@@ -115,7 +115,7 @@ If you don't feel like reading and prefer to watch a bunch of quick (less than 3
 
 ![AWS Cloud Development Kit egghead.io course logo](https://dev-to-uploads.s3.amazonaws.com/i/9p45p74bklgke0gsjjrl.png)
 
-I'm also launching an AWS Cloud Development Kit [egghead.io](https://egghead.io/s/km6vr) soon and to sum up why you shoul...might be hyped to take it:
+I've also launched an AWS Cloud Development Kit course on [egghead.io](https://egghead.io/s/km6vr) - make sure to check out [Build an App with the AWS Cloud Development Kit](https://egghead.io/courses/build-an-app-with-the-aws-cloud-development-kit?af=6p5abz)!
 
 **AWS Cloud Development Kit** allows you to build the **_entire_** stack (frontend, serverless backend, AWS infrastructure) using a **single** programming language - TypeScript!
 
