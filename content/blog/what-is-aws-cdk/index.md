@@ -31,9 +31,9 @@ and
 
 In order to have a working webapp you need three things:
 
-- frontend
-- backend
-- infrastructure to run the app on (or simply put - at least a server)
+-   frontend
+-   backend
+-   infrastructure to run the app on (or simply put - at least a server)
 
 Now, imagine that you can define **ALL OF THOSE** with a **SINGLE** programming language - TypeScript.
 
@@ -85,21 +85,24 @@ Since CDK abstracts a lot of things away from us, it's possible to entire archit
 
 <figcaption>This architecture can be built and deployed with a single command 🤯</figcaption>
 
-## Where do I start?
+# I'd like to learn more, how can I do that?
 
 Excellent question!
 
-I'm launching an AWS CDK course on [egghead.io](https://egghead.io/s/km6vr) **soon** so make sure to get a subscription!
-It's the best piece of content I've ever created and I'm incredibly proud of it.
+I've launched an entire AWS CDK course on [egghead.io](https://egghead.io/s/km6vr) - check out [Build an App with the AWS Cloud Development Kit](https://egghead.io/courses/build-an-app-with-the-aws-cloud-development-kit?af=6p5abz)
 
-By the way - if you'd like to learn some AWS **for free** from yours truly, check out those free video collections on [egghead.io](https://egghead.io/s/km6vr):
+[![A Build an App with the AWS Cloud Development Kit course header](./cdk-logo.png)](https://egghead.io/courses/build-an-app-with-the-aws-cloud-development-kit?af=6p5abz)
 
-- [Learn AWS Lambda from scratch](https://egghead.io/playlists/learn-aws-lambda-from-scratch-d29d?af=6p5abz)
-- [Learn AWS Serverless Application Model (AWS SAM) from scratch](https://egghead.io/playlists/learn-aws-serverless-application-model-aws-sam-framework-from-scratch-baf9?af=6p5abz)
+It's the best piece of content I've ever created and I'm incredibly proud of it 🌟
 
-Apart from that those are excellent resources that I'm more than happy to recommend:
+Apart from that, I also have [egghead.io](https://egghead.io/s/km6vr) collections about serverless topics, such as:
 
-- https://github.com/eladb/awesome-cdk
-- https://aws.amazon.com/cdk/
-- https://docs.aws.amazon.com/cdk/latest/guide/home.html
-- https://github.com/cdk-patterns/serverless
+-   [Learn AWS Lambda from scratch](https://egghead.io/playlists/learn-aws-lambda-from-scratch-d29d?af=6p5abz)
+-   [Learn AWS Serverless Application Model (AWS SAM) from scratch](https://egghead.io/playlists/learn-aws-serverless-application-model-aws-sam-framework-from-scratch-baf9?af=6p5abz)
+
+On top of that those are excellent resources that I'm more than happy to recommend:
+
+-   https://github.com/eladb/awesome-cdk
+-   https://aws.amazon.com/cdk/
+-   https://docs.aws.amazon.com/cdk/latest/guide/home.html
+-   https://github.com/cdk-patterns/serverless

@@ -134,15 +134,18 @@ Every construct takes 3 arguments:
 
 Excellent question!
 
-I'm launching an AWS CDK course on [egghead.io](https://egghead.io/s/km6vr) **soon** so make sure to get a subscription!
+I've launched an entire AWS CDK course on [egghead.io](https://egghead.io/s/km6vr) - check out [Build an App with the AWS Cloud Development Kit](https://egghead.io/courses/build-an-app-with-the-aws-cloud-development-kit?af=6p5abz)
+
+[![A Build an App with the AWS Cloud Development Kit course header](./cdk-logo.png)](https://egghead.io/courses/build-an-app-with-the-aws-cloud-development-kit?af=6p5abz)
+
 It's the best piece of content I've ever created and I'm incredibly proud of it 🌟
 
-By the way - if you'd like to learn some AWS **for free** from yours truly, check out those free video collections on [egghead.io](https://egghead.io/s/km6vr):
+Apart from that, I also have [egghead.io](https://egghead.io/s/km6vr) collections about serverless topics, such as:
 
 -   [Learn AWS Lambda from scratch](https://egghead.io/playlists/learn-aws-lambda-from-scratch-d29d?af=6p5abz)
 -   [Learn AWS Serverless Application Model (AWS SAM) from scratch](https://egghead.io/playlists/learn-aws-serverless-application-model-aws-sam-framework-from-scratch-baf9?af=6p5abz)
 
-Apart from that those are excellent resources that I'm more than happy to recommend:
+On top of that those are excellent resources that I'm more than happy to recommend:
 
 -   https://github.com/eladb/awesome-cdk
 -   https://aws.amazon.com/cdk/
