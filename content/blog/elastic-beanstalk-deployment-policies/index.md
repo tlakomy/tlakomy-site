@@ -1,6 +1,6 @@
 ---
 slug: elastic-beanstalk-deployment-policies
-date: 2020-07-06
+date: 2020-07-08
 title: 'AWS Made Simple: Elastic Beanstalk deployment policies'
 published: true
 banner: './banner.png'
