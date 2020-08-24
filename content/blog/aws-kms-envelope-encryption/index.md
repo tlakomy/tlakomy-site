@@ -29,7 +29,7 @@ KMS stores keys that are called CMKs (Customer Master Keys). Those keys are used
 
 You may have already used Customer Master Keys without even knowing it. The reason it happens is when you use any AWS service with encryption, those CMKs are created for you (that's why they're called **AWS-Managed CMKs**). If you want to, you can also use your own Customer-Managed CMKs (e.g. when you want to have a full control over not only the key but its rotation etc.)
 
-**How can I see a CMK?** Well, you can't.
+**How can I see a CMK?** Well, you will never have access to the key itself, but you can see if it exists.
 
 For instance, here's a list of some of CMKs on my account:
 
