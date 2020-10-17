@@ -1,10 +1,10 @@
 ---
-slug: wtf-is-aws-lambda
-date: 2020-01-19
-title: 'AWS Made Simple: WTF is AWS Lambda?'
-description: 'Sooo... what is the deal with this whole serverless thing?'
+slug: why-i-dont-like-story-point-driven-estimates
+date: 2020-10-17
+title: 'Why I don't like story-point-driven estimates'
+description: 'Let me tell you a story about stories'
 published: true
-banner: './banner.png'
+banner: './banner.jpg'
 ---
 
 _Disclaimer: all of this is my personal opinion, you are more than welcome to disagree - let's chat, I'd love to learn your perspective!_
