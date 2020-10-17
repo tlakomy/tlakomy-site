@@ -1,7 +1,7 @@
 ---
 slug: why-i-dont-like-story-point-driven-estimates
 date: 2020-10-17
-title: 'Why I don't like story-point-driven estimates'
+title: "Why I don't like story-point-driven estimates"
 description: 'Let me tell you a story about stories'
 published: true
 banner: './banner.jpg'
