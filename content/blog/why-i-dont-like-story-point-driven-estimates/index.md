@@ -1,8 +1,8 @@
 ---
 slug: why-i-dont-like-story-point-driven-estimates
 date: 2020-10-17
-title: 'Why I don't like story-point-driven estimates'
-description: 'Let me tell you a story about stories'
+title: 'Why (frontend) testing matters'
+description: 'Because well tested code does not wake you up at 2am'
 published: true
 banner: './banner.jpg'
 ---
