@@ -7,157 +7,63 @@ published: true
 banner: './banner.png'
 ---
 
-_Disclaimer: all of this is my personal opinion, you are more than welcome to disagree - let's chat, I'd love to learn your perspective!_
+## Before we start
 
-Software engineering estimates are **ridiculously** hard.
+If you don't feel like reading and prefer to watch a bunch of quick (less than 3 minutes) videos - this blog series is based on a 💰free 💰[egghead.io](https://egghead.io/s/km6vr) video collection I've published recently, check it out here: [Learn AWS Lambda from scratch](https://egghead.io/lessons/aws-wtf-is-aws-lambda?pl=learn-aws-lambda-from-scratch-d29d?af=6p5abz).
 
-Let's face it, when a developer tells you on Monday that:
+## WTF is AWS Lambda?
 
->Oh yeah, I'm finishing that feature, it'll be merged to `main` branch today!
+When someone says that:
 
-you can translate that to:
+> Yeah, we're going **serverless** with AWS
 
->There's a non-zero chance that it'll be pushed to code review this week.
+They probably mean [AWS Lambda](https://aws.amazon.com/lambda/)
 
-Bear in mind that it's not because developers are slacking at work (even though the more senior you are, the more time you spend on Slack, but _that's a discussion for another time_).
+![AWS Lambda Homepage](https://thepracticaldev.s3.amazonaws.com/i/hcs1olbhsbydgpejm6ti.png)
 
-There are multiple reasons why this happens - unforeseen requirements popping up in the middle of a sprint, tests that take a little longer to write due to legacy code, a tricky manual testing flow, deployment issues, just to name a few.
+<figcaption>I'm not an expert but this is quite a lot of text for a landing page tbh</figcaption>
 
-Unfortunately an ever-changing (or dare I say - agile?) environment is a part of our job. Some people think that's exciting, some folks thrive in managing growing complexity of software, some just want to _merge this feature and be done with it_.
+AWS Lambda is an Amazon Web Services service which operates in a Function as a Service (FaaS for short) model. What that means is that you, as a developer, are only responsible to provide the function (that is - the _code_) that needs to be executed once the lambda function runs. Everything else (servers, infrastructure, scaling) is taken care of by AWS.
 
-Here's a thing though - other teams, stakeholders, your manager are probably not going to be very happy if every single ticket you're assigned to takes sometime between an hour and 40 months.
+### This is what **serverless** means.
 
-That's why we're constantly asked to **estimate** our work, which is the bane of our existence. I'm yet to meet anyone who enjoys estimating their work (although I've noticed that some consider themselves to be very good at estimating *other people's* work).
+Of course, there **ARE** servers, but you, as a developer, you don't have to care about provisioning and maintaining servers. Which means that you get to focus on implementing your business logic and solving your problems, instead of having to tinker with servers and worry whether they'll survive the next wave of customers.
 
-## The art of estimation
+_Okay, but this sounds expensive_
 
-Back in 2013, I had my very first fulltime job as a Junior Software Engineer. At some point I was assigned my first very own large feature to implement and ... estimate.
+It's not! With AWS Lambda you only pay for the compute time you consume.
 
->So, Tomasz - when is it going to be ready?
+What that means is that a lambda function can take up to **15 minutes** to execute, but if your function takes only a second to run you will only pay for this one single second of execution time.
 
-Here's what I thought:
->_crap, crap, crap, I have no idea?! Nobody taught me how to estimate, what do I say?! I don't want to appear slow, what if they find out that I'm an imposter?_
+The best part is - **you don't start paying right away**.
 
-Here's what I said:
->I think it'll be ready in 2 weeks!
+AWS Lambda free tier usage includes **ONE FREAKING MILLION** free requests per month.
 
-(_It wasn't_)
+In other words - you only start paying one your service gets rather popular, one million request per month is pretty significant.
 
-7 years later, estimation is still... tricky, to say the least.
+Once you go above a million requests per month, you pay only \$0.20 per million requests. (An exercise for the reader: calculate how many requests you'd need to handle before the cost of your serverless functions becomes more than a cup of coffee from Starbucks).
 
-In 2015 I was introduced to the concept of **story points**. Since everyone _[citation needed]_ uses JIRA, let me quote what Atlassian has to say about story points:
+### What can I use to create my lambda functions?
 
->Many agile teams, however, have transitioned to story points. Story points rate the relative effort of work in a Fibonacci-like format: 0, 0.5, 1, 2, 3, 5, 8, 13, 20, 40, 100. It may sound counter-intuitive, but that abstraction is actually helpful because it pushes the team to make tougher decisions around the difficulty of work.
+Excellent question.
 
-(_I wonder what a 100 story points ticket looks like, I have a feeling that webpack is somehow involved_)
+There are a number of programming languages supported in AWS Lambda:
 
-In essence the idea is to stop for a while before jumping in to implement a feature and **think**. 
+![A list of programming languages supported by AWS Lambda](https://thepracticaldev.s3.amazonaws.com/i/faca7hjqt04vi36rh7gs.png)
 
-_How difficult is this?_
+.NET, Go, Java, Node.js, Python, Ruby - a little something for everyone (_no jQuery though_).
 
-_Is it more difficult to implement than the stuff we did before?_
+### How do I trigger a lambda function?
 
-_Is it possible to split the ticket into multiple smaller ones?_
+A lambda function can be triggered by quite a lot of sources.
 
-(I've worked with teams that refused to take anything larger than 8/13 points since it should be split and it works well.)
+![A list of AWS Lambda triggers](https://thepracticaldev.s3.amazonaws.com/i/uqvwqu66uex2pr4l3c1m.png)
 
-Asking those questions is a **great** idea and you _should_ be doing that. The questions are not why I'm writing this post.
+Honorable mentions:
 
-**Assigning an arbitrary number to JIRA ticket is.**
+- AWS Gateway can trigger your lambda function by an HTTP request (useful when you want to create an API
+- AWS IoT - you can **literally** have a "push to prod" button on your desk
+- AWS S3 - a lambda function can be triggered by uploading a file to an S3 bucket (if you don't know what a bucket is, check [this post](https://dev.to/tlakomy/wtf-is-amazon-s3-840) out.)
+- AWS DynamoDB - you can trigger a lambda function by for instance adding an item to your DynamoDB table
 
-After the team finishes discussing a feature they have to estimate it (usually using something called a planning poker - to make sure that team members are not influencing each other estimates).
-
-If a ticket is small, then the whole team will (usually) gues...estimate it 1/2 story points and they get to continue 
-
-The _fun_ part begins when there's a range of estimates. I've personally been involved in (too) many discussions whether X is a 3 or 8 story point ticket. Look, having more opportunities for discussion is not a bad idea, but those conversations would often drag for ages. 
-
-I've even personally witnessed engineers **implementing the feature** being discussed **during the meeting**. 
-
-Perhaps establishing a rule of simply selecting a larger estimate would be a good idea?
-
-## The numbers, what do they mean?
-
-Okay, but why am I complaining about assigning (seemingly) harmless numbers to JIRA tickets?
-
-The problem lies in what development teams are doing with story points and how they change the perception of our own work.
-
-Many Agile/Scrum teams are measuring their _velocity_ (which is an amount of story points they usually deliver within a single sprint).
-
-Let's assume that there are two teams contributing to the same codebase - Alpha and Beta.
-
-The Beta team is seemingly beta (_hah!_) than the other team, their velocity is 60 story points, whereas Alpha team usually delivers around 35 points per sprint.
-
-Even though you've never met those developers (mostly because they don't exist) you've most likely already established an unconscious bias regarding their performance. The idea behind velocity is _not_ to do that, obviously, since every team has a different way of estimating but we're only humans - given two numbers, we **will** compare them.
-
-That's not the worst part, let's zoom on a perspective of a single team.
-
-### Why do we even measure velocity?
-
-To optimize for **predictability**.
-
-Velocity does not help you optimize for user's experience, accessibility, performance, value provided, $$ - the only thing that it cares about is:
-
->Given 100 story points, how long it'll take the team to implement this.
-
-Which would absolutely fantastic if it worked, since business needs to understand when/if features will be shipped to prod. The problem is that, in my experience, it rarely does.
-
-Software engineers struggle to accurately estimate single tickets and now you want us to take the sum of our _wildly inaccurate_ estimates and make decisions based on this? Good luck.
-
-Notice how assigning those numbers changes how we perceive work being done by the team. 
-
-They're asked to estimate (guess) how much work is required to implement a large collection of features and that changes the whole discussion.
-
-Instead of celebrating the amazing work done by them every sprint, the discussion shifts towards:
-
->Are we on track with the estimates we've provided a quarter ago when we barely understood the problem we're trying to solve?
-
-This is not healthy.
-
-A process like this introduces unreasonable expectations on the team and may cause them to work longer hours/weekends, eventual burnout and that 1on1 "I'm leaving" meeting.
-
-## What should we do instead?
-
-In larger software projects there are three factors that shape the final product:
-- the deadline (_when do we need to ship it?_)
-- the scope (_what do we need to ship?_)
-- the size of the team (_who is going to ship it?_)
-
-Imagine that your startup absolutely has to ship a large feature next quarter.
-
-Your JIRA backlog can barely contain all the tickets, product managers can barely contain their excitement, and developers can barely ship their code to prod because of legacy prod pipelines (but I digress!)
-
-Out of those three factors: **deadline, scope, size of the team**, I propose we set one of them "in stone":
-
-**The deadline.**
-
->Wait, are you seriously suggesting that we should work with fixed deadlines? I thought that estimating software is difficult/impossible?
-
-Yes. Exactly.
-
-Since given a scope (a list of tickets) we cannot tell for sure _when_ they're going to be done, let's set the _when_ in place and modify only the _what_.
-
-What do we need to solve our user's needs? Can we solve that particular problem without all those bells and whistles? 
-
-In other words - given a deadline of 15 November, take a good look at what is **absolutely necessary** to ship this feature and **throw away everything else**.
-
-And then throw away even more.
-
-Notice how this technique will allow the team to have a laser focus on the problem they're trying to solve. Smaller scope usually results in more resilient code because there's simply more time to consider how it should be implemented (not to mention adding tests!)
-
-Shifting the focus from:
-
->What do we need to do in order to finish all those tickets before the deadline?
-
-to
-
->What more can we cut in order to solve our user's problem before the deadline?
-
-helps establish a more healthy relationship between business and developers. The deadlines are met, unfortunately (?) not every idea gets implemented which is not always a bad thing.
-
-Imagine building something that your users absolutely don't want for a year.
-
-Isn't it better to ship something meaningful (even a MVP?) in a quarter and validate if their problems/needs are addressed?
-
-Isn't it better to stop guessing and start focusing on our user's and solving their problems in a predictable fashion?
-
-I honestly think so, but I'd love to hear your perspective 🥳
+It's a **ridiculously** powerful paradigm, allowing you to compose major workflows and business logic out of serverless functions, while keeping your costs extremely low.
