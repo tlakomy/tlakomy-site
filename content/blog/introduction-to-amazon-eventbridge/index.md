@@ -72,7 +72,7 @@ You can check out the video that this post was based on [here](https://www.youtu
 
 # One more thing
 
-If you'd like to learn some AWS **for free** from yours truly, check out those free video collections on [egghead.io](https://egghead.io/s/km6vr):
+If you'd like to learn some AWS from yours truly, check out these playlists on [egghead.io](https://egghead.io/s/km6vr):
 
 -   [Learn AWS Lambda from scratch](https://egghead.io/playlists/learn-aws-lambda-from-scratch-d29d?af=6p5abz)
 -   [Learn AWS Serverless Application Model (AWS SAM) from scratch](https://egghead.io/playlists/learn-aws-serverless-application-model-aws-sam-framework-from-scratch-baf9?af=6p5abz)
