@@ -6,7 +6,7 @@ published: true
 banner: './banner.png'
 ---
 
-Link to the course: [Designing GraphQL Schemas](**https://egghead.io/courses/designing-graphql-schemas-99db?af=6p5abz**) by [Nik Graf](https://egghead.io/instructors/nik-graf?af=6p5abz)
+Link to the course: [Designing GraphQL Schemas](https://egghead.io/courses/designing-graphql-schemas-99db?af=6p5abz) by [Nik Graf](https://egghead.io/instructors/nik-graf?af=6p5abz)
 
 ## Mocking and naming conventions
 
@@ -91,7 +91,7 @@ Then it's up to our implementation to define how that type should be serialized,
 }
 ```
 - And yes, this is bloated like hell, but solves all pagination-related problems
-- Both `edge` and `pageInfo` fields can be extended with data useful for our use case
+- Both `**edge******` and `pageInfo` fields can be extended with data useful for our use case
 
 ## Naming top-level Query Fields in GraphQL
 - If we want to have an access pattern in which an `item` can be received either by an ID or by name, it's better to create two separate fields:
