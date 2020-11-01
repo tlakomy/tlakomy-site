@@ -6,8 +6,6 @@ published: true
 banner: './banner.png'
 ---
 
-# Notes grom GraphQL Query Language by [Eve Porcello](https://twitter.com/eveporcello)
-
 I've decided to revisit one of the best [egghead.io](https://egghead.io/s/km6vr) courses - [GraphQL Query Language](https://egghead.io/courses/graphql-query-language?af=6p5abz) by [Eve Porcello](https://twitter.com/eveporcello) and you can find my notes below:
 
 - In a GraphQL query, the shape of the query matches the shape of the response:
