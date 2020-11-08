@@ -6,8 +6,6 @@ published: true
 banner: './banner.png'
 ---
 
-Notes from Up and Running with TypeScript by [John Lindquist](https://egghead.io/instructors/john-lindquist?af=6p5abz)
-
 I've decided to revisit a [Up and Running with TypeScript](https://egghead.io/courses/up-and-running-with-typescript?af=6p5abz) [egghead.io](https://egghead.io/s/km6vr) course by [John Lindquist](https://egghead.io/instructors/john-lindquist?af=6p5abz) and since I'm learning in public, feel fre to check out my notes below:
 
 - The fastest way to kickstart a local project with TypeScript is to use [parcel-bundler](https://github.com/parcel-bundler/parcel)
