@@ -1,7 +1,7 @@
 ---
 slug: build-a-simple-graphql-server-with-apollo-and-cdk
 date: 2020-11-13
-title: "Build an file upload email subscription with CDK, S3 and SNS"
+title: "Build a file upload email subscription with CDK, S3 and SNS"
 published: true
 banner: './banner.png'
 ---
