@@ -1,6 +1,6 @@
 ---
 slug: build-a-simple-graphql-server-with-apollo-and-cdk
-date: 2020-10-31
+date: 2020-11-12
 title: "Build a simple GraphQL server with Apollo Server and AWS CDK"
 published: true
 banner: './banner.png'
