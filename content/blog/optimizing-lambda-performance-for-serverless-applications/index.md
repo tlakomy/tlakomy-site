@@ -103,3 +103,9 @@ In order to solve issues with connections to a relational database, consider usi
 ![](./rds_proxy.png)
 
 RDS Proxy (launched at Re:Invent 2019) will intelligently manage your connections to a relational database in RDS. As such, it helps match the way that scalable compute works with traditional database architectures.
+
+In order to reuse existing connections (and improve the performance of functions using `http(s)` request) use `keep-alive` property in order to reuse TCP connections on warm execution environments. More details: https://bit.ly/reuse-connection
+
+## Sync vs. async lambda architectures
+
+![](./sync.png)
