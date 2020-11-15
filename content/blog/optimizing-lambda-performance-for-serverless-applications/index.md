@@ -1,5 +1,5 @@
 ---
-slug:  
+slug: optimizing-lambda-performance-for-serverless-applications
 date: 2020-11-14
 title: 'Notes from Optimizing Lambda Performance for Your Serverless Applications'
 published: true
