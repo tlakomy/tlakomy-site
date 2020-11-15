@@ -26,3 +26,4 @@ If you'd like to learn more I'd recommend:
 - [Best practices for working with AWS Lambda functions](https://docs.aws.amazon.com/lambda/latest/dg/best-practices.html)
 - [Optimizing Lambda Performance for Your Serverless Applications](https://www.youtube.com/watch?v=FTCaOQJvG6Y)
 - [Learn you some Lambda best practice for great good!](https://theburningmonk.thinkific.com/courses/learn-you-some-lambda) by [Yan Cui](https://twitter.com/theburningmonk)
+- [Learn AWS Lambda from scratch on egghead.io](https://egghead.io/playlists/learn-aws-lambda-from-scratch-d29d?af=6p5abz)
