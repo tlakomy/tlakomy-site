@@ -1,7 +1,7 @@
 ---
 slug: ten-quick-facts-about-aws-lambda
 date: 2020-11-15
-title: 'Ten non-trivial facts about AWS Lambda'
+title: '10 quick facts about AWS Lambda'
 published: true
 banner: './banner.png'
 ---
