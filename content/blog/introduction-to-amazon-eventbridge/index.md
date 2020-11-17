@@ -8,7 +8,7 @@ banner: './banner.png'
 
 In the serverless world, everything revolves around events.
 
-Your (micro)services are responsible for either producting or reacting to different kinds of events (e.g. API calls).
+Your (micro)services are responsible for either producing or reacting to different kinds of events (e.g. API calls).
 
 When you have an architecture where (for example) a single API call can trigger a Lambda function that saves something in DynamoDB which triggers an event in DynamoDB Stream which in turn triggers another lambda function which then... _you know what I mean_. Things can quickly become incredibly hard to control and reason about.
 
