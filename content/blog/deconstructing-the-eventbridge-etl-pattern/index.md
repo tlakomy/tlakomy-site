@@ -8,10 +8,11 @@ banner: './banner.png'
 
 ## The EventBridge ETL
 
-This blogpost is based on [Deconstructing "The EventBridge ETL" AWS Serverless Architecture Pattern
+This blogpost is a quick summary of [Deconstructing "The EventBridge ETL" AWS Serverless Architecture Pattern
 ](https://www.youtube.com/watch?v=8kg5bYsdem4) by [Matt Coulter](https://twitter.com/nideveloper)
 
 Check out the pattern here: https://github.com/cdk-patterns/serverless/tree/master/the-eventbridge-etl
+
 Or clone it by running:
 
 ```bash
