@@ -31,7 +31,7 @@ Purpose:
 
 Diagram:
 
-![](assets/banner.png)
+![](./banner.png)
 
 1. Upload a CSV file to Amazon S3
 2. After file upload, an object creation event is sent to SQS with a Lambda function subscribed to that queue (note that file contents are not a part of the message). This lambda (and every other function in this pattern) is throttled intentionally to two concurrent executions.
