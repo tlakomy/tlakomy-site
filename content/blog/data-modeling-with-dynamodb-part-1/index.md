@@ -14,10 +14,10 @@ banner: './dynamodb.png'
 - Primary Key
 - Attributes
 
-Table - a collection of data (similar to a table in a relational database)
-Item - an individual record in a DynamoDB table (similar to a row in a relational database)
-Primary Key - whenever you create a DynamoDB table you need to specify a primary key and each item in a table needs to be uniquely identified by that key
-Attributes - additional fields on an Item (other than the primary key). You don't need to declare them in advance, in that sense DynamoDB is schemaless (as in - it's not going to enforce any pre-defined schema). Attributes can either be simple (strings, numbers etc.) or complex (lists, collections, sets).
+- Table - a collection of data (similar to a table in a relational database)
+- Item - an individual record in a DynamoDB table (similar to a row in a relational database)
+- Primary Key - whenever you create a DynamoDB table you need to specify a primary key and each item in a table needs to be uniquely identified by that key
+- Attributes - additional fields on an Item (other than the primary key). You don't need to declare them in advance, in that sense DynamoDB is schemaless (as in - it's not going to enforce any pre-defined schema). Attributes can either be simple (strings, numbers etc.) or complex (lists, collections, sets).
 
 ## Primary key
 There are two types of primary keys:
