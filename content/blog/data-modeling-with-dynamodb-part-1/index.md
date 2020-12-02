@@ -9,10 +9,6 @@ banner: './dynamodb.png'
 # Notes from Data modeling with Amazon DynamoDB – Part 1 with Alex DeBrie
 
 ## DynamoDB basics:
-- Table
-- Item
-- Primary Key
-- Attributes
 
 - Table - a collection of data (similar to a table in a relational database)
 - Item - an individual record in a DynamoDB table (similar to a row in a relational database)
