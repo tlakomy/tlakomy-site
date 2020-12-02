@@ -3,7 +3,7 @@ slug: notes-from-data-modeling-with-dynamodb-part-1
 date: 2020-12-02
 title: "Notes from Data modeling with Amazon DynamoDB – Part 1 with Alex DeBrie"
 published: true
-banner: './dynamodb.jpg'
+banner: './dynamodb.png'
 ---
 
 # Notes from Data modeling with Amazon DynamoDB – Part 1 with Alex DeBrie
