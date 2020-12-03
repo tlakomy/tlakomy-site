@@ -8,14 +8,14 @@ banner: './dynamodb.png'
 
 # Notes from Data modeling with Amazon DynamoDB – Part 1 with Alex DeBrie
 
-## DynamoDB basics:
+### DynamoDB basics:
 
 - Table - a collection of data (similar to a table in a relational database)
 - Item - an individual record in a DynamoDB table (similar to a row in a relational database)
 - Primary Key - whenever you create a DynamoDB table you need to specify a primary key and each item in a table needs to be uniquely identified by that key
 - Attributes - additional fields on an Item (other than the primary key). You don't need to declare them in advance, in that sense DynamoDB is schemaless (as in - it's not going to enforce any pre-defined schema). Attributes can either be simple (strings, numbers etc.) or complex (lists, collections, sets).
 
-## Primary key
+### Primary key
 There are two types of primary keys:
 
 - Simple primary key (partition key)
@@ -26,14 +26,14 @@ Primary key has to uniquely identify an item so when using composite primary key
 DynamoDB's guiding principle:
 **Don't allow operations that won't scale**
 
-## From SQL to NoSQL
+### From SQL to NoSQL
 - primary key is hugely important (almost all of your access patterns will be based off primary keys, we don't query with attributes)
 - There are no joins in DynamoDB 🙀
 - Knowing your access paterns is advance is hugely important when working with DynamoDB
 - Secondary indexes are necessary for multiple access patterns (since a single partition + sort key is not going to be enough for ensuring a large range of potential access patterns)
 - Whenever we create a secondary index data from base table is copied into secondary index with new primary key. They can be used for read-based operations (no writes)
 
-## Single table design:
+### Single table design:
 
 **All entities in one table + generic primary keys**
 
@@ -44,7 +44,7 @@ Example:
 
 As we can see in the example - items that share the same partition key (but **not the sort key**) are going to have different attributes (because for instance - *user* and *organization* are going to have different attributes associated with them)
 
-## One-to-many relationships:
+### One-to-many relationships:
 
 Example: an office may have multiple employees, a customer can have multiple orders etc.
 
