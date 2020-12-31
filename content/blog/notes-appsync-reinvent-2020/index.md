@@ -85,7 +85,7 @@ type Subscription {
 }
 ```
 
-**Notes from [Best practices to securely operate GraphQL at scale with AWS AppSync](https://virtual.awsevents.com/media/1_47rvebii) by [Brice Pelle](https://twitter.com/bricepelle)**
+**Notes from [Best practices to securely operate GraphQL at scale with AWS AppSync](https://virtual.awsevents.com/media/1_47rvebii) by [Brice Pellé](https://twitter.com/bricepelle)**
 
 AppSync provides enterprise security features such as:
 - AWS WAF
