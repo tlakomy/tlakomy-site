@@ -6,9 +6,9 @@ published: true
 banner: './banner.png'
 ---
 
-# AWS Step Functions
+# Notes from Complete guide to AWS Step Functions
 
-Notes from https://theburningmonk.thinkific.com/courses/take/complete-guide-to-aws-step-functions\
+Notes from https://theburningmonk.thinkific.com/courses/take/complete-guide-to-aws-step-functions
 
 - Define the steps of your workflow in the JSON-based Amazon States Language
 - With AWS Step Functions, you pay only for the transition from one step of your application workflow to the next, called a state transition. Billing is metered by state transition, regardless of how long each state persists (up to one year).
@@ -37,7 +37,7 @@ Pricing:
 Pricing:
 >Priced by the number of executions you run, their duration, and memory consumption. You are charged $1 per million executions, and duration price from $0.000004 to $0.00001 per GB-second.	
 
-![](assets/state_machine_types.png)
+![](./state_machine_types.png)
 
 ## State machine triggers:
 - AWS Console
