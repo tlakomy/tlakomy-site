@@ -27,8 +27,6 @@ Notes from https://theburningmonk.thinkific.com/courses/take/complete-guide-to-a
 - X-Ray tracing (charges apply)
 - Tags
 
-- We can execute a state machine with any input
-
 ## State machine types
 - **Standard** - durable, checkpointed workflows for machine learning, order fulfillment, IT/DevOps automation, ETL jobs and other log-duration workloads.
 Pricing:
