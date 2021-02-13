@@ -6,19 +6,19 @@ published: true
 banner: './banner.png'
 ---
 
-# Notes from Complete guide to AWS Step Functions
-
 Notes from https://theburningmonk.thinkific.com/courses/take/complete-guide-to-aws-step-functions
 
 - Define the steps of your workflow in the JSON-based Amazon States Language
 - With AWS Step Functions, you pay only for the transition from one step of your application workflow to the next, called a state transition. Billing is metered by state transition, regardless of how long each state persists (up to one year).
 
 ## State types:
-- **Pass state** - passes its input to its output (without peforming work). Useful when constructing and debugging state machines
-- **Choice state** - adds branching logic to a state machine. Can implement 16 different comparision operators and can be combined using And, Or and Not
-- **Wait state** - delays the state machine from continuing for a specified time
+- **Task state** - performs a task (e.g. calls a Lambda function identified by its ARN). Can specify an optional timeout which defaults to 60s, even if fuction has a longer timeout (it's a good idea to set this timeout to match your function's timeout)
+- **Pass state** - passes its input to its output (without peforming work). Useful when constructing and debugging state machines. Example - modifying the `ResultPath`.
+- **Wait state** - delays the state machine from continuing for a specified time.
+- **Choice state** - adds branching logic to a state machine. Can implement 16 different comparision operators and can be combined using And, Or and Not. It needs to specify a default state which will be applied when none of the choices match.
 - **Parallel state** - can be used to create parallel branches of execution in your state machine
-- **Task state**
+- **Succeed** - terminates the state machine successfully.
+- **Fail** - terminates the state machine and mark it as failure
 
 ## State machine details
 - Name
@@ -26,6 +26,8 @@ Notes from https://theburningmonk.thinkific.com/courses/take/complete-guide-to-a
 - Logging (CloudWatch charges apply)
 - X-Ray tracing (charges apply)
 - Tags
+
+- We can execute a state machine with any input
 
 ## State machine types
 - **Standard** - durable, checkpointed workflows for machine learning, order fulfillment, IT/DevOps automation, ETL jobs and other log-duration workloads.
