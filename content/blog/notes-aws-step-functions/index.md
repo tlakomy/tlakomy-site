@@ -14,12 +14,18 @@ Notes from https://theburningmonk.thinkific.com/courses/take/complete-guide-to-a
 ## State types:
 - **Task state** - performs a task (e.g. calls a Lambda function identified by its ARN). Can specify an optional timeout which defaults to 60s, even if fuction has a longer timeout (it's a good idea to set this timeout to match your function's timeout)
 - **Pass state** - passes its input to its output (without peforming work). Useful when constructing and debugging state machines. Example - modifying the `ResultPath`.
-- **Wait state** - delays the state machine from continuing for a specified time.
+- **Wait state** - delays the state machine from continuing for a specified time (either a specific interval e.g. 5 seconds or till a timestamp)
 - **Choice state** - adds branching logic to a state machine. Can implement 16 different comparision operators and can be combined using And, Or and Not. It needs to specify a default state which will be applied when none of the choices match.
-- **Parallel state** - can be used to create parallel branches of execution in your state machine
+- **Parallel state** - can be used to create parallel branches of execution in your state machine. Note that if one parallel branch fails, than all the other branches are immediately cancelled.
+- **Map state** - 
 - **Succeed** - terminates the state machine successfully.
 - **Fail** - terminates the state machine and mark it as failure
 
+### Parallel state:
+- parallel states can be nested
+- you can only transition to another state in the **same** branch
+- no duplicate state names in the whole state machine
+- outputs from branches are collected into an array
 ## State machine details
 - Name
 - IAM permission (either create a new role based on your state machine's definition or use an existing one)
@@ -33,7 +39,7 @@ Notes from https://theburningmonk.thinkific.com/courses/take/complete-guide-to-a
 - **Standard** - durable, checkpointed workflows for machine learning, order fulfillment, IT/DevOps automation, ETL jobs and other log-duration workloads.
 Pricing:
 >Priced per state transition. A state transition is counted each time a step in your execution is completed. You are charged $25 per million state transitions.**	
-- **Express** - event-driven workflows for streaming data processing, microservices orchestration, IoT data ingestion, mobile backends and other short duration, high-event-rate workloads
+- **Express** - event-driven workflows for streaming data processing, microservices orchestration, IoT data ingestion, mobile backends and other short duration, high-event-rate workloads. They are cheaper but lack the visual audit capabilities.
 Pricing:
 >Priced by the number of executions you run, their duration, and memory consumption. You are charged $1 per million executions, and duration price from $0.000004 to $0.00001 per GB-second.	
 
@@ -48,6 +54,26 @@ Pricing:
 ## Pricing:
 - Free tier - 4,000 state transitions per month (note that it does not automatically expire at the end of your 12 month AWS Free Tier term and is available to both existing and new AWS customers indefinitely)
 - State transitions - $0.025 per 1000 state transitions (that is - $25 per one million state transitions). It's one of the most expensive services on AWS.
+
+## Managing execution state
+- A function recieves the current execution state as input
+- A state can also define its `InputPath` so a whole exeuction state does not need to be passed in as an input
+- We can map the value returned from a Lambda function to a `ResultPath`, e.g.: `"ResultPath": "$.n"`
+
+## Error handling:
+- Each error can be retried separately and has its own retry count
+- An error can define an `IntervalSeconds` (the time between retries), `BackoffRate` (multiplier between retries) and `MaxAttempts`
+- Note that an error with `MaxAttempts` set to 0 won't be retried
+- A state can also define a `Catch` clause which will, well, catch errors once their retry count is over
+
+## Limits:
+- Maximum open executions: 1,000,000
+- Maximum execution time: 1 year (enough for `npm install`, lmao)
+- Maximum execution history size: 25,500 events
+- Maximum execution idle time: 1 year
+- Maximum execution history retention time: 90 days
+- Maximum input to a Task is 32kB (larger inputs should be stored in S3)
+
 
 # Concepts (source: https://states-language.net/spec.html)
 
