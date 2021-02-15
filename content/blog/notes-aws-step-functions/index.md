@@ -39,7 +39,7 @@ Notes from https://theburningmonk.thinkific.com/courses/take/complete-guide-to-a
 - **Standard** - durable, checkpointed workflows for machine learning, order fulfillment, IT/DevOps automation, ETL jobs and other log-duration workloads.
 Pricing:
 >Priced per state transition. A state transition is counted each time a step in your execution is completed. You are charged $25 per million state transitions.**	
-- **Express** - event-driven workflows for streaming data processing, microservices orchestration, IoT data ingestion, mobile backends and other short duration, high-event-rate workloads. They are cheaper but lack the visual audit capabilities.
+- **Express** - event-driven workflows for streaming data processing, microservices orchestration, IoT data ingestion, mobile backends and other short duration, high-event-rate workloads. They are cheaper but lack the visual audit capabilities. Since express workflows are event-driven, you cannot set up notifications for e.g. `SUCCEEDED` or `RUNNING` states (otherwise imagine your CloudWatch bill, oh my)
 Pricing:
 >Priced by the number of executions you run, their duration, and memory consumption. You are charged $1 per million executions, and duration price from $0.000004 to $0.00001 per GB-second.	
 
@@ -48,7 +48,7 @@ Pricing:
 ## State machine triggers:
 - AWS Console
 - AWS API (`StepFunction.startExecution(req).promise()`)
-- AWS API Gateway
+- AWS API Gateway (in a fire & forget pattern, API Gateway won't await for a state machine result - it can be a whole year after all)
 - CloudWatch Events (including cron)
 
 ## Pricing:
@@ -219,3 +219,82 @@ Another example:
     }
 ]
 ```
+
+## Step functions and other AWS Services:
+
+### SNS
+
+- When we're using SNS in a State, its type is still `Task` but the `Resource` is not sent to e.g. a Lambda function or a SNS topic. Instead it's set to a special `arn:aws:states:::sns:publish` resource
+- Inside the `Parameters` section we have to provide a `TopicArn` of the SNS topic we'd like to send a message to
+
+Example:
+```json
+"Send message to SNS": {
+  "Type": "Task",
+  "Resource": "arn:aws:states:::sns:publish",
+  "Parameters": {
+    "TopicArn": "arn:aws:sns:us-east-1:ACCOUNT_ID:myTopic",
+    "Message": {
+      "Input": "Hello from Step Functions!"
+    }
+  },
+  "Next": "NEXT_STATE"
+}
+```
+
+### SQS
+
+- We can also send messages to an SQS queue using the `Task` state
+- Similar to SNS, we need to use a special `arn:aws:states:::sqs:sendMessage` `Resource` and provide a `QueueUrl` in `Parameters`
+
+Example:
+
+```json
+"Send message to SQS": {
+  "Type": "Task",
+  "Resource": "arn:aws:states:::sqs:sendMessage",
+  "Parameters": {
+    "QueueUrl": "https://sqs.REGION.amazonaws.com/ACCOUNT_ID/myQueue",
+    "MessageBody": {
+      "Input": "Hello from Step Functions!"
+    }
+  },
+  "Next": "NEXT_STATE"
+}
+```
+
+## DynamoDB
+- Uses a `arn:aws:states:::dynamodb:putItem` resource for `putItem` call, `arn:aws:states:::dynamodb:getItem` for `getItem` call etc.
+- It's mandatory to specify a `TableName` in `Parameters`
+- Note: a `putItem` call won't return anything, that's why in the course Yan scheduled a `GetDynamoDBItem` state to occur after `PutDynamoDBItem`
+
+Example:
+
+```json
+"Get item from DynamoDB": {
+  "Type": "Task",
+  "Resource": "arn:aws:states:::dynamodb:getItem",
+  "Parameters": {
+    "TableName": "MyDynamoDBTable",
+    "Key": {
+      "Column": {
+        "S": "MyEntry"
+      }
+    }
+  },
+  "Next": "NEXT_STATE"
+}
+```
+## Activities
+- We can find them in the Console next to `State machines`
+- They are used when we need to wait for external "activities" to complete
+- With activites the state machine is no longer fully controlling the flow as it's simply waiting for an activity to complete
+- They require a usage of Task Poller
+## Callbacks
+- They solve a problem with Activities (_"activities kinda suck because you need to run pollers, which is not exactly event driven & serverless"_)
+- With callbacks a state machine can send a message e.g. to an SQS queue with a `TaskToken` and ask SQS to notify the state machine when it's done/failed
+
+## Nested workflows
+- **fire-and-forget**: a "root" state machine starts another state machine but does not wait for it to complete (and as such we won't know if it succeeded/failed)
+- **synchronous**: a "root" state machine starts another state machine and waits for it to complete
+- **callback**: using a `TaskToken`
