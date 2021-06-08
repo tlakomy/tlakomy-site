@@ -83,8 +83,9 @@ Using this single log line as an example:
 
 The following two parse expressions each do the following: the ephemeral fields level, config, and exception are created. level has a value of `ERROR`, config has a value of `{foo=2, bar=data}`, and exception has a value of DataIntegrityException. The first example uses a glob expression, and the second uses a regular expression.
 
-`parse @message "[*] * The error was: *" as level, config, exception`
-`parse @message /\[(?<level>\S+)\]\s+(?<config>\{.*\})\s+The error was: (?<exception>\S+)/`
+-   `parse @message "[*] * The error was: *" as level, config, exception`
+
+-   `parse @message /\[(?<level>\S+)\]\s+(?<config>\{.*\})\s+The error was: (?<exception>\S+)/`
 
 ## The difference between `fields` and `display`
 
